@@ -5,17 +5,16 @@
 #include <stdarg.h>
 #include <unistd.h>
 /**
- * s_print - flag struct
+ * struct s_print - flag struct
  * @flag: flag
  * @p_fun: pointer to flag function
  */
 typedef struct s_print
 {
 	char flag;
-	void (*p_fun)(va_list);
+	void (*p_fun)(va_list, char *);
 } print;
-
-void p_char();
+void p_char(va_list list, char *p_buf);
 int _printf(const char *format, ...);
 print *diccio();
 
