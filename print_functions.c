@@ -7,7 +7,6 @@
 void p_char(va_list list, char *p_buf)
 {
 	*p_buf = va_arg(list, int);
-	p_buf++;
 }
 /**
  * diccio - save character to buffer
