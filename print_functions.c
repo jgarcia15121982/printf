@@ -4,9 +4,11 @@
  * @list: list of args
  * @p_buf: pointer to buffer
  */
-void p_char(va_list list, char *p_buf)
+char *p_char(va_list list, char *p_buf)
 {
 	*p_buf = va_arg(list, int);
+	p_buf++;
+	return (p_buf);
 }
 /**
  * diccio - save character to buffer

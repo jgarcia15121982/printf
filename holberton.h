@@ -12,9 +12,9 @@
 typedef struct s_print
 {
 	char flag;
-	void (*p_fun)(va_list, char *);
+	char *(*p_fun)(va_list, char *);
 } print;
-void p_char(va_list list, char *p_buf);
+char *p_char(va_list list, char *p_buf);
 int _printf(const char *format, ...);
 print *diccio();
 
