@@ -6,9 +6,35 @@
  */
 int _printf(const char *format, ...)
 {
+	int i = 0, j = 0;
 	print *dic = diccio();
-	char *buffer = malloc(2048); 
-	printf("%c%s\n", p[0].flag, format);
+	char *buffer = malloc(2048);
+	char *p_buf = buffer;
+	va_list list;
+
+	va_start(list, format);
+
+	while (format && format[i])
+	{
+		if (format[i] != '%')
+		{
+			*p_buf = format[i];
+			p_buf++;
+		}
+		else
+		{
+			i++;
+			j = 0;
+			while (dic[j])
+			{
+				if (format[i] == dic[j].flag)
+					dic[j].p_fun(list, p_buf);
+				j++;
+			}
+		}
+		i++;
+	}
+	write(1, buffer);
 	free(buffer);
 	return (0);
 }
