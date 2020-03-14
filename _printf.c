@@ -9,7 +9,7 @@ int size_buf (char *point_buf)
 	int i = 0;
 	while(point_buf[i])
 		i++;
-	return (i + 1);
+	return (i);
 }
 /**
  * _printf - print all arguments that put int
@@ -36,7 +36,7 @@ int _printf(const char *format, ...)
 		{
 			i++;
 			j = 0;
-			while (j < 1)
+			while (j < 2)
 			{
 				if (format[i] == dic[j].flag)
 					p_buf = dic[j].p_fun(list, p_buf);
@@ -48,5 +48,5 @@ int _printf(const char *format, ...)
 	write(1, buffer, size_buf(buffer));
 	free(buffer);
 	va_end(list);
-	return (0);
+	return (size_buf(buffer));
 }

@@ -22,7 +22,7 @@ char *p_string(va_list list, char *p_buf)
 	char *p_pos;
 	int i;
 	i = 0;
-        *p_pos = va_arg(list, char *);
+        p_pos = va_arg(list, char *);
         
 	while (p_pos[i] != '\0')
 	{
@@ -32,8 +32,6 @@ char *p_string(va_list list, char *p_buf)
 	}
         return (p_buf);
 }
-
-
 
 /**
  * diccio - save character to buffer
