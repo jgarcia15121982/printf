@@ -17,6 +17,7 @@ typedef struct s_print
 char *p_char(va_list list, char *p_buf);
 char *p_string(va_list list, char *p_buf);
 char *p_porc(va_list list, char *p_buf);
+char *print_int(va_list list, char *p_buf);
 int _printf(const char *format, ...);
 print *diccio();
 
