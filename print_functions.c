@@ -39,7 +39,7 @@ char *p_string(va_list list, char *p_buf)
  * @p_buf: pointer to buffer
  * Return: A pointer.
  */
-char *p_porc(char *p_buf)
+char *p_porc(va_list list __attribute__((unused)), char *p_buf)
 {
 	*p_buf = '%';
         p_buf++;
