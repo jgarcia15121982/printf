@@ -34,15 +34,31 @@ char *p_string(va_list list, char *p_buf)
 }
 
 /**
+ * p_porc - Saves a '%' character to buffer
+ * @list: list of args
+ * @p_buf: pointer to buffer
+ * Return: A pointer.
+ */
+char *p_porc(char *p_buf)
+{
+	*p_buf = '%';
+        p_buf++;
+        return (p_buf);
+}
+
+
+/**
  * diccio - save character to buffer
  * Return: pointer to new dictionary
  */
 print *diccio()
 {
-	print *dic = malloc(sizeof(print) * 2);
+	print *dic = malloc(sizeof(print) * 3);
 	dic[0].flag = 'c';
 	dic[0].p_fun = p_char;
 	dic[1].flag = 's';
 	dic[1].p_fun = p_string;
+	dic[2].flag = '%';
+        dic[2].p_fun = p_porc;
 	return (dic);
 }

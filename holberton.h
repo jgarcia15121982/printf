@@ -12,10 +12,11 @@
 typedef struct s_print
 {
 	char flag;
-	char *(*p_fun)(va_list, char *);
+	char *(*p_fun)();
 } print;
 char *p_char(va_list list, char *p_buf);
 char *p_string(va_list list, char *p_buf);
+char *p_porc(char *p_buf);
 int _printf(const char *format, ...);
 print *diccio();
 

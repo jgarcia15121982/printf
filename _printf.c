@@ -36,7 +36,7 @@ int _printf(const char *format, ...)
 		{
 			i++;
 			j = 0;
-			while (j < 2)
+			while (j < 3)
 			{
 				if (format[i] == dic[j].flag)
 					p_buf = dic[j].p_fun(list, p_buf);
@@ -46,6 +46,7 @@ int _printf(const char *format, ...)
 		i++;
 	}
 	write(1, buffer, size_buf(buffer));
+	free(dic);
 	free(buffer);
 	va_end(list);
 	return (size_buf(buffer));
