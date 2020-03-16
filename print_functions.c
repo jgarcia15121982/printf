@@ -57,9 +57,14 @@ char *p_int(va_list list, char *p_buf)
 	int a, n, i, z;
 
 	a = va_arg(list, int);
-	n = a;
 	i = 0;
-
+	if (a < 0)
+	{
+		a *= -1;
+		*p_buf = '-';
+		p_buf++;
+	}
+	n = a;
 	while (n / 10 > 0)
 	{
 		n /= 10;
@@ -83,15 +88,23 @@ char *p_int(va_list list, char *p_buf)
  */
 print *diccio()
 {
-	print *dic = malloc(sizeof(print) * 4);
+	print *dic = malloc(sizeof(print) * 6);
 
-	dic[0].flag = 'c';
-	dic[0].p_fun = p_char;
-	dic[1].flag = 's';
-	dic[1].p_fun = p_string;
-	dic[2].flag = '%';
-	dic[2].p_fun = p_porc;
-	dic[3].flag = 'i';
-	dic[3].p_fun = p_int;
-	return (dic);
+	if (dic)
+	{
+		dic[0].flag = 'c';
+		dic[0].p_fun = p_char;
+		dic[1].flag = 's';
+		dic[1].p_fun = p_string;
+		dic[2].flag = '%';
+		dic[2].p_fun = p_porc;
+		dic[3].flag = 'i';
+		dic[3].p_fun = p_int;
+		dic[4].flag = 'd';
+		dic[4].p_fun = p_int;
+		dic[5].flag = '\0';
+		dic[5].p_fun = NULL;
+		return (dic);
+	}
+	return (NULL);
 }

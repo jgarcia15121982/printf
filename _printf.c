@@ -37,7 +37,7 @@ int _printf(const char *format, ...)
 		{
 			i++;
 			j = 0;
-			while (j < 4)
+			while (dic[j].flag)
 			{
 				if (format[i] == dic[j].flag)
 					p_buf = dic[j].p_fun(list, p_buf);
