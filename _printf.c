@@ -26,7 +26,7 @@ int _printf(const char *format, ...)
 	va_list list;
 
 	va_start(list, format);
-	if (!buffer || !dic)
+	if (!buffer || !dic || !format)
 	{
 		free(buffer);
 		free(dic);
