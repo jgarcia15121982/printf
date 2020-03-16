@@ -41,6 +41,7 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
+			
 			i++;
 			j = 0;
 			while (dic[j].flag)

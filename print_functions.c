@@ -24,7 +24,7 @@ char *p_char(va_list list, char *p_buf)
  */
 char *p_string(va_list list, char *p_buf)
 {
-	char *p_pos;
+	char *p_pos = NULL;
 	int i;
 
 	i = 0;
