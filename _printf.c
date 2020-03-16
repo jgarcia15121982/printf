@@ -60,6 +60,8 @@ int _printf(const char *format, ...)
 		else
 		{
 			i++;
+			if (format[i] == '\0')
+				break;
 			j = 0;
 			while (dic[j].flag && format[i] != '\0')
 			{
@@ -70,8 +72,8 @@ int _printf(const char *format, ...)
 				}
 				j++;
 			}
-			if (format[i] == '\0')
-				break;
+			if (!dic[j].flag && format [i] == '\n')
+				return (free(buffer), free(dic), -1);
 			p_buf = val_unknown(j, i, dic, p_buf, format);
 		}
 		i++;
