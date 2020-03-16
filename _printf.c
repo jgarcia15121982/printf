@@ -70,13 +70,13 @@ int _printf(const char *format, ...)
 				}
 				j++;
 			}
+			if (format[i] == '\0')
+				break;
 			p_buf = val_unknown(j, i, dic, p_buf, format);
 		}
 		i++;
 	}
 	*p_buf = '\0';
 	write(1, buffer, size_buf(buffer));
-	free(buffer), free(dic);
-	va_end(list);
-	return (size_buf(buffer));
+	return (free(buffer), free(dic), va_end(list), size_buf(buffer));
 }
