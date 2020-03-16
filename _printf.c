@@ -23,7 +23,7 @@ int size_buf(char *point_buf)
  */
 char *val_unknown(int j, int i, print *dic, char *p_buf, const char *format)
 {
-	if (dic[j].flag == '\0')
+	if (dic[j].flag == '\0' && *(format + i) != ' ')
 	{
 		*p_buf = *(format - 1 + i);
 		p_buf++;
@@ -70,9 +70,6 @@ int _printf(const char *format, ...)
 					p_buf = dic[j].p_fun(list, p_buf);
 					break;
 				}
-				else if (!dic[j + 1].flag && (format[i] == '\0'
-							     || format[i] == '\n'))
-					return (free(buffer), free(dic), -1);
 				j++;
 			}
 			p_buf = val_unknown(j, i, dic, p_buf, format);
