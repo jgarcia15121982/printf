@@ -7,8 +7,13 @@
  */
 char *p_char(va_list list, char *p_buf)
 {
-	*p_buf = va_arg(list, int);
-	p_buf++;
+	char test = va_arg(list, int);
+
+	if (test)
+	{
+		*p_buf = test;
+		p_buf++;
+	}
 	return (p_buf);
 }
 /**
@@ -24,16 +29,13 @@ char *p_string(va_list list, char *p_buf)
 
 	i = 0;
 	p_pos = va_arg(list, char *);
-	if (p_pos)
+	if (!p_pos)
+		p_pos = "(null)";
+	while (p_pos[i] != '\0')
 	{
-		if (p_pos == NULL)
-			return (0);
-		while (p_pos[i] != '\0')
-		{
-			*p_buf = p_pos[i];
-			p_buf++;
-			i++;
-		}
+		*p_buf = p_pos[i];
+		p_buf++;
+		i++;
 	}
 	return (p_buf);
 }
