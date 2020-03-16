@@ -32,6 +32,8 @@ int _printf(const char *format, ...)
 		free(dic);
 		return (-1);
 	}
+	if (format[0] == '%' && format[1] == '\0')
+		return (-1);
 	while (format && format[i])
 	{
 		if (format[i] != '%')
@@ -40,8 +42,7 @@ int _printf(const char *format, ...)
 			p_buf++;
 		}
 		else
-		{
-			
+		{			
 			i++;
 			j = 0;
 			while (dic[j].flag)
@@ -55,8 +56,7 @@ int _printf(const char *format, ...)
 	}
 	*p_buf = '\0';
 	write(1, buffer, size_buf(buffer));
-	free(dic);
-	free(buffer);
+	free(buffer), free(dic);
 	va_end(list);
 	return (size_buf(buffer));
 }
