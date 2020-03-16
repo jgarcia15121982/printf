@@ -24,6 +24,8 @@ char *p_string(va_list list, char *p_buf)
 
 	i = 0;
 	p_pos = va_arg(list, char *);
+	if (p_pos == NULL)
+		return (0);
 	while (p_pos[i] != '\0')
 	{
 		*p_buf = p_pos[i];
