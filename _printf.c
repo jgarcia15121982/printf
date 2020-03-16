@@ -1,13 +1,14 @@
 #include "holberton.h"
 /**
  * size_buf - get size buf
- * @point_buf: pointer to buff 
+ * @point_buf: pointer to buff
  * Return: size of buffer
  */
-int size_buf (char *point_buf)
+int size_buf(char *point_buf)
 {
 	int i = 0;
-	while(point_buf[i])
+
+	while (point_buf[i])
 		i++;
 	return (i);
 }
@@ -45,6 +46,7 @@ int _printf(const char *format, ...)
 		}
 		i++;
 	}
+	*p_buf = '\0';
 	write(1, buffer, size_buf(buffer));
 	free(dic);
 	free(buffer);
