@@ -7,7 +7,7 @@
  */
 char *p_char(va_list list, char *p_buf)
 {
-	char test = va_arg(list, int);
+	char test =(char)va_arg(list, int);
 
 	if (test)
 	{
