@@ -26,8 +26,12 @@ int _printf(const char *format, ...)
 	va_list list;
 
 	va_start(list, format);
-	if (!buffer)
+	if (!buffer || !dic)
+	{
+		free(buffer);
+		free(dic);
 		return (-1);
+	}
 	while (format && format[i])
 	{
 		if (format[i] != '%')
