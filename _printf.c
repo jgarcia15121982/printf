@@ -70,10 +70,11 @@ int _printf(const char *format, ...)
 					p_buf = dic[j].p_fun(list, p_buf);
 					break;
 				}
+				else if (!dic[j + 1].flag && (format[i] == '\0'
+							     || format[i] == '\n'))
+					return (free(buffer), free(dic), -1);
 				j++;
 			}
-			if (!dic[j].flag && format [i] == '\n')
-				return (free(buffer), free(dic), -1);
 			p_buf = val_unknown(j, i, dic, p_buf, format);
 		}
 		i++;
