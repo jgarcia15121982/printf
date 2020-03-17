@@ -50,7 +50,7 @@ int _printf(const char *format, ...)
 		return (free(buffer), free(dic), -1);
 	if (format[0] == '%' && format[1] == '\0')
 		return (-1);
-	while (format && format[i])
+	for (i = 0; format && format[i]; i++)
 	{
 		if (format[i] != '%')
 		{
@@ -74,9 +74,9 @@ int _printf(const char *format, ...)
 			}
 			p_buf = val_unknown(j, i, dic, p_buf, format);
 		}
-		i++;
 	}
 	*p_buf = '\0';
+	i = size_buf(buffer);
 	write(1, buffer, size_buf(buffer));
-	return (free(buffer), free(dic), va_end(list), size_buf(buffer));
+	return (va_end(list), free(buffer), free(dic), i);
 }
