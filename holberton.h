@@ -14,6 +14,7 @@ typedef struct s_print
 	char flag;
 	void (*p_fun)();
 } print;
+void p_S(va_list list, char *p_buf, int *p_size);
 void p_u(va_list list, char *p_buf, int *p_size);
 void p_o(va_list list, char *p_buf, int *p_size);
 void p_x(va_list list, char *p_buf, int *p_size);

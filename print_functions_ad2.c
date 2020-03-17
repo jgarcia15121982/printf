@@ -18,3 +18,36 @@ void p_u(va_list list, char *p_buf, int *p_size)
 	}
 	get_base(p_buf, p_size, a, 10, 0);
 }
+/**
+ * p_S - save strings to buffer
+ * @list: list of args
+ * @p_buf: pointer to buffer
+ * @p_size: size of buffer
+ * Return: A pointer.
+ */
+void p_S(va_list list, char *p_buf, int *p_size)
+{
+	char *p_pos = NULL;
+	int i;
+
+	i = 0;
+	p_pos = va_arg(list, char *);
+	if (!p_pos)
+		p_pos = "(null)";
+	while (p_pos[i] != '\0')
+	{
+		if (p_pos[i] < 32 || p_pos[i] >= 125)
+		{
+			p_buf[*p_size] = 92;
+			p_buf[(*p_size) + 1] = 'x';
+			*p_size += 2;
+			get_base(p_buf, p_size, p_pos[i], 16, 1);
+		}
+		else
+		{
+			p_buf[*p_size] = p_pos[i];
+			*p_size += 1;
+		}
+		i++;
+	}
+}
