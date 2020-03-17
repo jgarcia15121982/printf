@@ -13,6 +13,12 @@ void p_binary(va_list list, char *p_buf, int *p_size)
 
 	a = va_arg(list, int);
 	n = a;
+	if (a == 0)
+	{
+		p_buf[*p_size] = 48;
+		*p_size += 1;
+		return;
+	}
 	while (n != 0)
 	{
 		n /= 2;
