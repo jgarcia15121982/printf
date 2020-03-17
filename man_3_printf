@@ -7,6 +7,20 @@ SYNOPSIS
 DESCRIPTION
 	Print ARGUMENT(s) according to FORMAT
 	
+	FORMAT controls the output. Interpreted sequences are:
+	 %c prints a character
+	 %s prints a string
+	 %% prints a single %
+	 %i prints an integer
+	 %d prints an integer
+	 %u prints an unsigned data
+	 %o prints an unsigned octal
+	 %x prints an unsigned hexadecimal in lower case
+	 %X prints an unsigned hexadecimal in upper case
+	 %p prints a memory address
+	 %r prints a reverse string
+		
+	
 EXAMPLES
 	_printf("Length:[%d, %i]\n", len, len);
 	_printf("Character:[%c]\n", 'H');
