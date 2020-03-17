@@ -36,7 +36,7 @@ void p_S(va_list list, char *p_buf, int *p_size)
 		p_pos = "(null)";
 	while (p_pos[i] != '\0')
 	{
-		if (p_pos[i] < 32 || p_pos[i] >= 125)
+		if (((p_pos[i] > 0) && (p_pos[i] < 32)) || p_pos[i] >= 125)
 		{
 			p_buf[*p_size] = 92;
 			p_buf[(*p_size) + 1] = 'x';
