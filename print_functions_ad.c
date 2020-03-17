@@ -50,7 +50,7 @@ void p_reverse(va_list list, char *p_buf, int *p_size)
 		string = "(null)";
 	while (string[i])
 		i++;
-	while (i >= 0)
+	while (i > 0)
 	{
 		p_buf[*p_size] = string[i - 1];
 		*p_size += 1;
