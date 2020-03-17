@@ -1,18 +1,5 @@
 #include "holberton.h"
 /**
- * size_buf - get size buf
- * @point_buf: pointer to buff
- * Return: size of buffer
- */
-int size_buf(char *point_buf)
-{
-	int i = 0;
-
-	while (point_buf[i])
-		i++;
-	return (i);
-}
-/**
  * val_unknown - validate if the flag is unknow
  * @j: counter to dic
  * @i: counter to format

@@ -18,6 +18,7 @@ void p_char(va_list list, char *p_buf, int *p_size);
 void p_string(va_list list, char *p_buf, int *p_size);
 void p_porc(va_list list, char *p_buf, int *p_size);
 void p_int(va_list list, char *p_buf, int *p_size);
+void p_binary(va_list list, char *p_buf, int *p_size);
 int _printf(const char *format, ...);
 print *diccio();
 
