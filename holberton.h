@@ -14,6 +14,12 @@ typedef struct s_print
 	char flag;
 	void (*p_fun)();
 } print;
+void p_u(va_list list, char *p_buf, int *p_size);
+void p_o(va_list list, char *p_buf, int *p_size);
+void p_x(va_list list, char *p_buf, int *p_size);
+void p_X(va_list list, char *p_buf, int *p_size);
+void get_base(char *p_buf, int *p_size, unsigned int num,
+	      unsigned int base, int bool);
 void p_char(va_list list, char *p_buf, int *p_size);
 void p_string(va_list list, char *p_buf, int *p_size);
 void p_reverse(va_list list, char *p_buf, int *p_size);
