@@ -34,3 +34,24 @@ void p_binary(va_list list, char *p_buf, int *p_size)
 	}
 	*p_size += i;
 }
+/**
+ * p_reverse - Saves a integer to buffer
+ * @list: list of args
+ * @p_buf: pointer to buffer
+ * @p_size: size of buffer
+ * Return: A pointer.
+ */
+void p_reverse(va_list list, char *p_buf, int *p_size)
+{
+	int i = 0;
+	char *string = va_arg(list, char *);
+
+	while (string && string[i])
+		i++;
+	while (i >= 0)
+	{
+		p_buf[*p_size] = string[i];
+		*p_size += 1;
+		i--;
+	}
+}
