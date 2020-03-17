@@ -59,7 +59,7 @@ void p_porc(va_list list __attribute__((unused)), char *p_buf, int *p_size)
  */
 void p_int(va_list list, char *p_buf, int *p_size)
 {
-	int a, n, i, z;
+	long int a, n, i, z;
 
 	a = va_arg(list, int);
 	i = 0;
