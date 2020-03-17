@@ -3,26 +3,24 @@
  * p_char - save character to buffer
  * @list: list of args
  * @p_buf: pointer to buffer
+ * @p_size: size of buffer
  * Return: A pointer.
  */
-char *p_char(va_list list, char *p_buf)
+void p_char(va_list list, char *p_buf, int *p_size)
 {
 	char test = va_arg(list, int);
 
-	if (test)
-	{
-		*p_buf = test;
-		p_buf++;
-	}
-	return (p_buf);
+	p_buf[*p_size] = test;
+	*p_size += 1;
 }
 /**
  * p_string - save strings to buffer
  * @list: list of args
  * @p_buf: pointer to buffer
+ * @p_size: size of buffer
  * Return: A pointer.
  */
-char *p_string(va_list list, char *p_buf)
+void p_string(va_list list, char *p_buf, int *p_size)
 {
 	char *p_pos = NULL;
 	int i;
@@ -33,33 +31,33 @@ char *p_string(va_list list, char *p_buf)
 		p_pos = "(null)";
 	while (p_pos[i] != '\0')
 	{
-		*p_buf = p_pos[i];
-		p_buf++;
+		p_buf[*p_size] = p_pos[i];
+		*p_size += 1;
 		i++;
 	}
-	return (p_buf);
 }
 
 /**
  * p_porc - Saves a '%' character to buffer
  * @list: list of args
  * @p_buf: pointer to buffer
+ * @p_size: size of buffer
  * Return: A pointer.
  */
-char *p_porc(va_list list __attribute__((unused)), char *p_buf)
+void p_porc(va_list list __attribute__((unused)), char *p_buf, int *p_size)
 {
-	*p_buf = '%';
-	p_buf++;
-	return (p_buf);
+	p_buf[*p_size] = '%';
+	*p_size += 1;
 }
 
 /**
  * p_int - Saves a integer to buffer
  * @list: list of args
  * @p_buf: pointer to buffer
+ * @p_size: size of buffer
  * Return: A pointer.
  */
-char *p_int(va_list list, char *p_buf)
+void p_int(va_list list, char *p_buf, int *p_size)
 {
 	int a, n, i, z;
 
@@ -68,8 +66,8 @@ char *p_int(va_list list, char *p_buf)
 	if (a < 0)
 	{
 		a *= -1;
-		*p_buf = '-';
-		p_buf++;
+		p_buf[*p_size] = '-';
+		*p_size += 1;
 	}
 	n = a;
 	while (n / 10 > 0)
@@ -81,12 +79,11 @@ char *p_int(va_list list, char *p_buf)
 	z = i;
 	while (i > 0)
 	{
-		p_buf[i - 1] = (a % 10) + 48;
+		p_buf[i - 1 + *p_size] = (a % 10) + 48;
 		a /= 10;
 		i--;
 	}
-	p_buf += z;
-	return (p_buf);
+	*p_size += z;
 }
 
 /**

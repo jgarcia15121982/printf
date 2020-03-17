@@ -19,18 +19,19 @@ int size_buf(char *point_buf)
  * @dic: pointer to dictionary
  * @p_buf: pointer to last position of buffer
  * @format: string
+ * @p_size: size of string
  * Return: last position of buffer
  */
-char *val_unknown(int j, int i, print *dic, char *p_buf, const char *format)
+void val_unknown(int j, int i, print *dic, char *p_buf,
+		 const char *format, int *p_size)
 {
 	if (dic[j].flag == '\0' && *(format + i) != ' ')
 	{
-		*p_buf = *(format - 1 + i);
-		p_buf++;
-		*p_buf = *(format + i);
-		p_buf++;
+		p_buf[*p_size] = *(format - 1 + i);
+		*p_size += 1;
+		p_buf[*p_size] = *(format + i);
+		*p_size += 1;
 	}
-	return (p_buf);
 }
 /**
  * _printf - print all arguments that put int
@@ -39,10 +40,9 @@ char *val_unknown(int j, int i, print *dic, char *p_buf, const char *format)
  */
 int _printf(const char *format, ...)
 {
-	int i = 0, j = 0;
+	int i = 0, j = 0, size = 0, *p_size = &size;
 	print *dic = diccio();
 	char *buffer = malloc(2048);
-	char *p_buf = buffer;
 	va_list list;
 
 	va_start(list, format);
@@ -54,29 +54,26 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] != '%')
 		{
-			*p_buf = format[i];
-			p_buf++;
+			buffer[*p_size] = format[i];
+			*p_size += 1;
 		}
 		else
 		{
 			i++;
 			if (format[i] == '\0')
 				break;
-			j = 0;
-			while (dic[j].flag && format[i] != '\0')
+			for (j = 0; dic[j].flag && format[i] != '\0'; j++)
 			{
 				if (format[i] == dic[j].flag)
 				{
-					p_buf = dic[j].p_fun(list, p_buf);
+					dic[j].p_fun(list, buffer, p_size);
 					break;
 				}
-				j++;
 			}
-			p_buf = val_unknown(j, i, dic, p_buf, format);
+			val_unknown(j, i, dic, buffer, format, p_size);
 		}
 	}
-	*p_buf = '\0';
-	i = size_buf(buffer);
-	write(1, buffer, size_buf(buffer));
-	return (va_end(list), free(buffer), free(dic), i);
+	buffer[*p_size] = '\0';
+	write(1, buffer, *p_size);
+	return (va_end(list), free(buffer), free(dic), *p_size);
 }
