@@ -45,14 +45,15 @@ void p_reverse(va_list list, char *p_buf, int *p_size)
 {
 	int i = 0;
 	char *string = va_arg(list, char *);
-
+	char a;
 	if (!string)
 		string = "(null)";
-	while (string[i])
+	while (string[i] != '\0')
 		i++;
-	while (i > 0)
+	while (string[i - 1])
 	{
-		p_buf[*p_size] = string[i - 1];
+		a = string[i - 1];
+		p_buf[*p_size] = a;
 		*p_size += 1;
 		i--;
 	}
