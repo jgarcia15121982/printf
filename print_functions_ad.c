@@ -46,7 +46,9 @@ void p_reverse(va_list list, char *p_buf, int *p_size)
 	int i = 0;
 	char *string = va_arg(list, char *);
 
-	while (string && string[i])
+	if (!string)
+		string = "(null)";
+	while (string[i])
 		i++;
 	while (i >= 0)
 	{
