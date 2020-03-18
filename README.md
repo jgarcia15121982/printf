@@ -73,5 +73,5 @@ Please make sure to update tests as appropriate.
 [Holberton School](https://www.holbertonschool.com/)
 
 ## Authors
-- John Garcia  [@jgarcia15121982](https://www.github.com/jgarcia15121982)
 - Alejandro Castiblanco [@AlejoCasti](https://www.github.com/AlejoCasti)
+- John Garcia  [@jgarcia15121982](https://www.github.com/jgarcia15121982)
