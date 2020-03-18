@@ -80,7 +80,7 @@ If everything is successful, the function returns the num of chars printed. In o
 
 Char:
 ```c
-_printf("Hello Worl%c", 'd');
+_printf("Hello World%c", 'd');
 ```
 ```bash
 Output
