@@ -1,12 +1,14 @@
-![N|Solid](https://lh4.googleusercontent.com/yUzaviDgzDIq4-ZHp9k0YU5fsz0nOdekNRt1qHgp7Qdlw5BNfe6bETEf5ZWd-Vkn_m57BPx7HcDrwFK41ptLnQLTNipWmTAtiQwZL_8s97Nkzn94xP7XVKb3RnV0fx8QEZoxlkVd)
+![N|Solid](https://www.holbertonschool.com/holberton-logo.png)
 
 # Printf
 
-Printf is a C function for print all kind of formats.
+Printf is a function which allows to print in different formats such as string, char, integer and other basic format. Also it handles conversion as ROT13 and other format as hexa, octa and binary.
+
+You can get more details in man _printf .
 
 ## Installation
 
-Only download all the files you find in the repository to your directory.
+1. Download all the files you find in the repository to your directory.
 
 ```bash
 * _printf.c
@@ -18,8 +20,22 @@ Only download all the files you find in the repository to your directory.
 * print_functions_aux.c
 ```
 
+2. Import the header file where you need it.
+
+
+```bash
+* #include "holberton.h"
+```
+
 ## Usage
 
+As you import header file already you can use it.
+
+_Prototype_
+```c
+int _printf(const char *format, ...)
+```
+_printf_ Allow to print without arguments if it isn't necessary.
 ```c
 #include "holberton.h"
 
@@ -29,6 +45,28 @@ int main(void)
 	return (0);
 }
 ```
+Supported convention.
+
+| Attempt | char | string | int | hexa | HEXA | octal | binary | unsigned | ROT13 | Reverse |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| Seconds | %c: to print a char |  | 290 | 286 | 289 | 285 | 287 | 287 | 272 | 276 |
+
+| Format | Description  |
+| ------- | --- |
+| Char | %c: Print a char|
+| String | %s: Print a string |
+| Int | %d - %i: Print a integer |
+| Hexa | %x: Convert a integer to hexadecimal in lower-case |
+| HEXA | %X: Convert a integer to hexadecimal in upper-case |
+| Octal | %o: Convert a integer to octal number|
+| Binary | %b: COnvert a integer to binary number |
+| Unsigned | %u: Print a unsigned integer |
+| ROT13 | %R: Convert a integer to format ROT13 |
+| Reverse | %r: Reverse a string |
+
+# Return
+
+If everything is successful, the function returns the num of chars printed. In other case return -1. 
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
