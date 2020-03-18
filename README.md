@@ -1,4 +1,4 @@
-<p align="right"><img src="https://www.holbertonschool.com/holberton-logo.png"></p>
+<p align="left"><img src="https://www.holbertonschool.com/holberton-logo.png"></p>
 
 # Printf
 
@@ -13,7 +13,7 @@ You can get more details in man _printf .
 ```bash
 * _printf.c
 * holberton.h
-* man_3_printf.1
+* man_3_printf
 * print_functions.c
 * print_functions_ad.c
 * print_functions_ad2.c
@@ -51,13 +51,13 @@ Supported convention.
 | ------- | --- |
 | Char | %c: Print a char|
 | String | %s: Print a string |
-| Int | %d - %i: Print a integer |
-| Hexa | %x: Convert a integer to hexadecimal in lower-case |
-| HEXA | %X: Convert a integer to hexadecimal in upper-case |
-| Octal | %o: Convert a integer to octal number|
-| Binary | %b: Convert a integer to binary number |
-| Unsigned | %u: Print a unsigned integer |
-| ROT13 | %R: Convert a integer to format ROT13 |
+| Int | %d - %i: Print an integer |
+| Hexa | %x: Convert an integer to hexadecimal in lower-case |
+| HEXA | %X: Convert an integer to hexadecimal in upper-case |
+| Octal | %o: Convert an integer to octal number|
+| Binary | %b: Convert an integer to binary number |
+| Unsigned | %u: Print an unsigned integer |
+| ROT13 | %R: Convert an integer to format ROT13 |
 | Reverse | %r: Reverse a string |
 
 # Return
