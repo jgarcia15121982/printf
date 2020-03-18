@@ -30,5 +30,4 @@ void p_int(va_list list, char *p_buf, int *p_size);
 void p_binary(va_list list, char *p_buf, int *p_size);
 int _printf(const char *format, ...);
 print *diccio();
-
 #endif
