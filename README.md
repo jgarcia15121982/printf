@@ -74,7 +74,7 @@ If everything is successful, the function returns the num of chars printed. In o
 | print_function_1.c | Contains conversion functions that change base of a number |
 | print_function_2.c | Contains differents functions |
 | print_function_aux.c | This files has a function that change the base of a number. It is a auxiliar function|
-| man_3_printf | Man of printf |
+| man_3_printf | Man of _printf |
 
 ## Examples
 
