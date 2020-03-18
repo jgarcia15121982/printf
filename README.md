@@ -33,7 +33,7 @@ As you import header file already you can use it.
 
 _Prototype_
 ```c
-int _printf(const char *format, ...
+int _printf(const char *format, ...)
 ```
 _printf_ Allow to print without arguments if it isn't necessary.
 ```c
