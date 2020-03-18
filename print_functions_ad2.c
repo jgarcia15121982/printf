@@ -83,5 +83,10 @@ void p_ROT13(va_list list, char *p_buf, int *p_size)
 			}
 			j++;
 		}
+		if (dic[j] == '\0')
+		{
+			p_buf[*p_size] = tmp[i];
+			*p_size += 1;
+		}
 	}
 }
