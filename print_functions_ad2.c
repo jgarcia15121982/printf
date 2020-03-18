@@ -56,3 +56,32 @@ void p_S(va_list list, char *p_buf, int *p_size)
 		i++;
 	}
 }
+/**
+ * p_ROT13 - conversion to rot13
+ * @list: list of args
+ * @p_buf: pointer to buffer
+ * @p_size: size of buffer
+ * Return: A pointer.
+ */
+void p_ROT13(va_list list, char *p_buf, int *p_size)
+{
+	char *tmp = va_arg(list, char *);
+	char dic[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char leet[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
+	int i, j = 0;
+
+	for (i = 0; tmp[i] != '\0'; i++)
+	{
+		j = 0;
+		while (dic[j] != '\0')
+		{
+			if (tmp[i] == dic[j])
+			{
+				p_buf[*p_size] = leet[j];
+				*p_size += 1;
+				break;
+			}
+			j++;
+		}
+	}
+}
