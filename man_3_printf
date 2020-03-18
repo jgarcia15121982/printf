@@ -11,7 +11,6 @@ _printf
 Print ARGUMENT(s) according to FORMAT
 .PP
 FORMAT controls the output. Interpreted sequences are:
-
 .PP
 %c prints a character
 .PP
@@ -36,25 +35,17 @@ FORMAT controls the output. Interpreted sequences are:
 %r prints a reverse string
 .El
 .Pp
-
 .SH EXAMPLES
 .PP
  _printf("Length:[%d, %i]\n", len, len);
 .PP
  _printf("Character:[%c]\n", 'H');
-
 .SH SEE ALSO
 printf(1)
-
 .SH REPORTING BUGS
 Report printf bugs to 1514@holbertonschool.com or
 1620@holbertonschool.com
-
 .SH AUTHORS
 Written by Cristian Castiblanco and John Garcia.
-
 .SH COPYRIGHT
 Copyright © 2020 Holberton School. This is free software: you are free to change and redistribute it.
-
-.SH SEE ALSO
-printf (1)

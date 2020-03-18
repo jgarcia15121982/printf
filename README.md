@@ -1,4 +1,4 @@
-<p align="left"><img src="https://www.holbertonschool.com/holberton-logo.png"></p>
+<p align="center"><img src="https://www.holbertonschool.com/holberton-logo.png"></p>
 
 # Printf
 
@@ -11,20 +11,20 @@ You can get more details in man _printf .
 1. Download all the files you find in the repository to your directory.
 
 ```bash
-* _printf.c
-* holberton.h
-* man_3_printf
-* print_functions.c
-* print_functions_ad.c
-* print_functions_ad2.c
-* print_functions_aux.c
+- _printf.c
+- holberton.h
+- man_3_printf
+- print_functions.c
+- print_functions_ad.c
+- print_functions_ad2.c
+- print_functions_aux.c
 ```
 
 2. Import the header file where you need it.
 
 
 ```bash
-* #include "holberton.h"
+ #include "holberton.h"
 ```
 
 ## Usage
@@ -33,7 +33,7 @@ As you import header file already you can use it.
 
 _Prototype_
 ```c
-int _printf(const char *format, ...
+int _printf(const char *format, ...)
 ```
 _printf_ Allow to print without arguments if it isn't necessary.
 ```c
@@ -73,5 +73,5 @@ Please make sure to update tests as appropriate.
 [Holberton School](https://www.holbertonschool.com/)
 
 ## Authors
-- John Garcia  [@jgarcia15121982](https://www.github.com/jgarcia15121982)
 - Alejandro Castiblanco [@AlejoCasti](https://www.github.com/AlejoCasti)
+- John Garcia  [@jgarcia15121982](https://www.github.com/jgarcia15121982)

@@ -1,12 +1,12 @@
 #include "holberton.h"
 /**
- * val_unknown - validate if the flag is unknow
+ * val_unknown - validate wheter the flag is unknown
  * @j: counter to dic
  * @i: counter to format
  * @dic: pointer to dictionary
- * @p_buf: pointer to last position of buffer
+ * @p_buf: pointer to last buffer position
  * @format: string
- * @p_size: size of string
+ * @p_size: string size
  * Return: last position of buffer
  */
 void val_unknown(int j, int i, print *dic, char *p_buf,
