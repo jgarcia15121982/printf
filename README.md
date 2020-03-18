@@ -1,4 +1,4 @@
-<p align="right"><img src="https://www.holbertonschool.com/holberton-logo.png"></p>
+<p align="left"><img src="https://www.holbertonschool.com/holberton-logo.png"></p>
 
 # Printf
 
