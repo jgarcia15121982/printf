@@ -118,12 +118,12 @@ print *diccio()
 		dic[9].p_fun = p_o;
 		dic[10].flag = 'u';
 		dic[10].p_fun = p_u;
-		dic[10].flag = 'S';
-		dic[10].p_fun = p_S;
-		dic[11].flag = 'R';
-		dic[11].p_fun = p_ROT13;
-		dic[12].flag = '\0';
-		dic[12].p_fun = NULL;
+		dic[11].flag = 'S';
+		dic[11].p_fun = p_S;
+		dic[12].flag = 'R';
+		dic[12].p_fun = p_ROT13;
+		dic[13].flag = '\0';
+		dic[13].p_fun = NULL;
 		return (dic);
 	}
 	return (NULL);
