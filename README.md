@@ -24,7 +24,7 @@ You can get more details in man _printf .
 
 
 ```bash
-* #include "holberton.h"
+ #include "holberton.h"
 ```
 
 ## Usage
