@@ -4,7 +4,7 @@
 
 Printf is a function which allows to print in different formats such as string, char, integer and other basic format. Also it handles conversion as ROT13 and other format as hexa, octa and binary.
 
-You can get more details in man _printf .
+You can get more details in man _printf.
 
 ## Installation
 
