@@ -55,3 +55,6 @@ Written by Cristian Castiblanco and John Garcia.
 
 .SH COPYRIGHT
 Copyright © 2020 Holberton School. This is free software: you are free to change and redistribute it.
+
+.SH SEE ALSO
+printf (1)
