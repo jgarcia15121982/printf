@@ -13,7 +13,7 @@ You can get more details in man _printf .
 ```bash
 * _printf.c
 * holberton.h
-* man_3_printf.1
+* man_3_printf
 * print_functions.c
 * print_functions_ad.c
 * print_functions_ad2.c
