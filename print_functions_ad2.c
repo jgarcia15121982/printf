@@ -43,8 +43,9 @@ void p_S(va_list list, char *p_buf, int *p_size)
 			if (p_pos[i] < 16)
 			{
 				p_buf[(*p_size) + 2] = '0';
+				*p_size += 1;
 			}
-			*p_size += 3;
+			*p_size += 2;
 			get_base(p_buf, p_size, p_pos[i], 16, 1);
 		}
 		else
