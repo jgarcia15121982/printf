@@ -55,13 +55,13 @@ Supported convention.
 | ------- | --- |
 | Char | %c: Print a char|
 | String | %s: Print a string |
-| Int | %d - %i: Print a integer |
-| Hexa | %x: Convert a integer to hexadecimal in lower-case |
-| HEXA | %X: Convert a integer to hexadecimal in upper-case |
-| Octal | %o: Convert a integer to octal number|
-| Binary | %b: COnvert a integer to binary number |
-| Unsigned | %u: Print a unsigned integer |
-| ROT13 | %R: Convert a integer to format ROT13 |
+| Int | %d - %i: Print an integer |
+| Hexa | %x: Convert an integer to hexadecimal in lower-case |
+| HEXA | %X: Convert an integer to hexadecimal in upper-case |
+| Octal | %o: Convert an integer to octal number|
+| Binary | %b: Convert an integer to binary number |
+| Unsigned | %u: Print an unsigned integer |
+| ROT13 | %R: Convert an integer to format ROT13 |
 | Reverse | %r: Reverse a string |
 
 # Return
