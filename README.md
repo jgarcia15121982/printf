@@ -11,13 +11,13 @@ You can get more details in man _printf .
 1. Download all the files you find in the repository to your directory.
 
 ```bash
-* _printf.c
-* holberton.h
-* man_3_printf
-* print_functions.c
-* print_functions_ad.c
-* print_functions_ad2.c
-* print_functions_aux.c
+- _printf.c
+- holberton.h
+- man_3_printf
+- print_functions.c
+- print_functions_ad.c
+- print_functions_ad2.c
+- print_functions_aux.c
 ```
 
 2. Import the header file where you need it.
