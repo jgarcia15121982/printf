@@ -1,4 +1,4 @@
-![N|Solid](https://www.holbertonschool.com/holberton-logo.png)
+<p align="right"><img src="https://www.holbertonschool.com/holberton-logo.png"></p>
 
 # Printf
 
@@ -13,7 +13,7 @@ You can get more details in man _printf .
 ```bash
 * _printf.c
 * holberton.h
-* man_3_printf
+* man_3_printf.1
 * print_functions.c
 * print_functions_ad.c
 * print_functions_ad2.c
@@ -33,7 +33,7 @@ As you import header file already you can use it.
 
 _Prototype_
 ```c
-int _printf(const char *format, ...)
+int _printf(const char *format, ...
 ```
 _printf_ Allow to print without arguments if it isn't necessary.
 ```c
@@ -47,10 +47,6 @@ int main(void)
 ```
 Supported convention.
 
-| Attempt | char | string | int | hexa | HEXA | octal | binary | unsigned | ROT13 | Reverse |
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| Seconds | %c: to print a char |  | 290 | 286 | 289 | 285 | 287 | 287 | 272 | 276 |
-
 | Format | Description  |
 | ------- | --- |
 | Char | %c: Print a char|
@@ -59,7 +55,7 @@ Supported convention.
 | Hexa | %x: Convert a integer to hexadecimal in lower-case |
 | HEXA | %X: Convert a integer to hexadecimal in upper-case |
 | Octal | %o: Convert a integer to octal number|
-| Binary | %b: COnvert a integer to binary number |
+| Binary | %b: Convert a integer to binary number |
 | Unsigned | %u: Print a unsigned integer |
 | ROT13 | %R: Convert a integer to format ROT13 |
 | Reverse | %r: Reverse a string |
@@ -75,3 +71,7 @@ Please make sure to update tests as appropriate.
 
 ## License
 [Holberton School](https://www.holbertonschool.com/)
+
+## Authors
+- John Garcia  [@jgarcia15121982](https://www.github.com/jgarcia15121982)
+- Alejandro Castiblanco [@AlejoCasti](https://www.github.com/AlejoCasti)
