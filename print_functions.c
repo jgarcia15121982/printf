@@ -92,7 +92,7 @@ void p_int(va_list list, char *p_buf, int *p_size)
  */
 print *diccio()
 {
-	print *dic = malloc(sizeof(print) * 13);
+	print *dic = malloc(sizeof(print) * 14);
 
 	if (dic)
 	{
@@ -120,8 +120,10 @@ print *diccio()
 		dic[10].p_fun = p_u;
 		dic[10].flag = 'S';
 		dic[10].p_fun = p_S;
-		dic[11].flag = '\0';
-		dic[11].p_fun = NULL;
+		dic[11].flag = 'R';
+		dic[11].p_fun = p_ROT13;
+		dic[12].flag = '\0';
+		dic[12].p_fun = NULL;
 		return (dic);
 	}
 	return (NULL);
