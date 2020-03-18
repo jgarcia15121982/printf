@@ -126,10 +126,6 @@ _printf("Holberton School : %R", "Holberton School");
 Output
  Holberton School : Ubyoregba Fpubby
 ```
-## Contributing
-
-
-
 
 ## License
 [Holberton School](https://www.holbertonschool.com/)
