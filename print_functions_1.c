@@ -104,7 +104,7 @@ void p_reverse(va_list list, char *p_buf, int *p_size)
 	char *string = va_arg(list, char *);
 
 	if (!string)
-		string = "(null)";
+		return;
 	while (string[i] != '\0')
 		i++;
 	while (string[i - 1])
